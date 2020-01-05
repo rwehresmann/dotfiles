@@ -15,4 +15,4 @@
 
 4. Install plugins `:PlugInstall`.
 
-In order to use the fuzzy finder, got to [ctrlp](https://ctrlpvim.github.io/ctrlp.vim/#installation) and do the step 1 and 3. 
+The file describes CtrlP as a fuzzy finder, in order to use it got to [CtrlP](https://ctrlpvim.github.io/ctrlp.vim/#installation) and do the steps 1 and 3. In order make this finder work way faster, simply install [The Silver Searcher](https://github.com/ggreer/the_silver_searcher). 
