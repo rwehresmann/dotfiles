@@ -15,3 +15,4 @@
 
 4. Install plugins `:PlugInstall`.
 
+In order to use the fuzzy finder, got to [ctrlp](https://ctrlpvim.github.io/ctrlp.vim/#installation) and do the step 1 and 3. 

@@ -3,12 +3,15 @@ call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins.
 Plug 'tpope/vim-surround'
+Plug 'ctrlpvim/ctrlp'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
 " If we have a sintax checker for the given file extension, use it
 filetype plugin indent on
+
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
