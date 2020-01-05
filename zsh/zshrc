@@ -1,0 +1,24 @@
+# Download antigen if not present.
+if [[ ! -e ~/.zsh/antigenrc ]]; then
+  mkdir -p ~/.zsh
+  touch ~/.zsh/antigenrc
+  GET git.io/antigen > ~/.zsh/antigenrc
+fi
+
+source ~/.zsh/antigenrc
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+antigen bundle git
+antigen bundle heroku
+antigen bundle command-not-found
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen theme robbyrussell
+
+antigen apply
+
+# Fom zsh-autosuggestions
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=white"
