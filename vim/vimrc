@@ -6,3 +6,33 @@ Plug 'tpope/vim-surround'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
+
+" If we have a sintax checker for the given file extension, use it
+filetype plugin indent on
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+" Numbers
+set number
+set numberwidth=5
+
+if &t_Co >= 256 || has('gui_running') 
+  if filereadable(expand('$HOME/.vim/colors/mustang.vim'))
+    colorscheme mustang
+  endif
+endif
+
+if &t_Co > 2 || has('gui_running')
+  " switch syntax highlighting on, when the terminal has colors
+  syntax on
+endif
+
+" Identation
+set tabstop=2    " Use 2 spaces
+set shiftwidth=2 " Use 2 spaces when indent with shift
+set expandtab   
+
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
