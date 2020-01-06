@@ -20,5 +20,12 @@ antigen theme robbyrussell
 
 antigen apply
 
-# Fom zsh-autosuggestions
+# Fom zsh-autosuggestions.
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=white"
+
+# Set monitor refresh rate to 240hz.
+alias setrr='xrandr -s 1920x1080 -r 240'
+
+# MAC pbcopy and pbpaste equivalent for linux.
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
