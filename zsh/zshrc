@@ -21,7 +21,15 @@ antigen theme robbyrussell
 antigen apply
 
 # Fom zsh-autosuggestions.
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=white"
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=white'
+
+export ERL_AFLAGS="-kernel shell_history enabled"
+
+# https://stackoverflow.com/questions/59491848/how-to-fix-railss-warning-messages-with-ruby-2-7-0
+export RUBYOPT='-W:no-deprecated -W:no-experimental'
+
+# Keep history of commands used in `iex` shell.
+export ERL_AFLAGS="-kernel shell_history enabled"
 
 # Set monitor refresh rate to 240hz.
 alias setrr='xrandr -s 1920x1080 -r 240'
@@ -32,3 +40,19 @@ alias pbpaste='xclip -selection clipboard -o'
 
 # Rails
 alias migrate="rake db:migrate db:rollback && rake db:migrate"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/rwehresmann/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/rwehresmann/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/rwehresmann/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/rwehresmann/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
