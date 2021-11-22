@@ -26,7 +26,7 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=white'
 export ERL_AFLAGS="-kernel shell_history enabled"
 
 # https://stackoverflow.com/questions/59491848/how-to-fix-railss-warning-messages-with-ruby-2-7-0
-export RUBYOPT='-W:no-deprecated -W:no-experimental'
+# export RUBYOPT='-W:no-deprecated -W:no-experimental'
 
 # Keep history of commands used in `iex` shell.
 export ERL_AFLAGS="-kernel shell_history enabled"
@@ -56,3 +56,10 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# Set Go bin path
+export PATH=$PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/Documents/repositories/go
+export PATH=$PATH:$GOPATH/bin
